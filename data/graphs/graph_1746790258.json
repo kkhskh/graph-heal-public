@@ -1,0 +1,31 @@
+{
+  "timestamp": 1746790258,
+  "nodes": [
+    "service_a",
+    "service_b",
+    "service_c",
+    "service_d"
+  ],
+  "edges": [
+    {
+      "source": "service_a",
+      "target": "service_b",
+      "weight": 1.0
+    },
+    {
+      "source": "service_a",
+      "target": "service_c",
+      "weight": 1.0
+    },
+    {
+      "source": "service_b",
+      "target": "service_d",
+      "weight": 1.0
+    },
+    {
+      "source": "service_c",
+      "target": "service_d",
+      "weight": 1.0
+    }
+  ]
+}

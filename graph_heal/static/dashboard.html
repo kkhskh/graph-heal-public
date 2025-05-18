@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GRAPH-HEAL Live Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.23.0/cytoscape.min.js"></script>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f7f9fa; margin: 0; padding: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 24px; }
+        h1 { color: #34495e; }
+        .status-bar { display: flex; gap: 32px; margin-bottom: 24px; }
+        .status-box { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #eee; padding: 16px 24px; min-width: 180px; }
+        .status-label { color: #888; font-size: 14px; }
+        .status-value { font-size: 28px; font-weight: bold; }
+        #cy { width: 100%; height: 400px; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #eee; margin-bottom: 24px; }
+        .section { margin-bottom: 32px; }
+        table { width: 100%; border-collapse: collapse; background: #fff; }
+        th, td { padding: 8px 12px; border-bottom: 1px solid #eee; }
+        th { background: #f1f1f1; }
+        .manual-form { background: #fff; padding: 16px; border-radius: 8px; box-shadow: 0 2px 8px #eee; }
+        .manual-form label { display: block; margin-top: 8px; }
+        .manual-form input, .manual-form select { width: 100%; padding: 6px; margin-top: 4px; }
+        .manual-form button { margin-top: 12px; padding: 8px 16px; background: #3498db; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+        .manual-form button:hover { background: #217dbb; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>GRAPH-HEAL Live Dashboard</h1>
+    <div class="status-bar" id="status-bar"></div>
+    <div id="cy"></div>
+    <div class="section">
+        <h2>Active Faults</h2>
+        <table id="faults-table">
+            <thead><tr><th>ID</th><th>Type</th><th>Service</th><th>Severity</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="section">
+        <h2>Active Recovery Tasks</h2>
+        <table id="recovery-table">
+            <thead><tr><th>ID</th><th>Action</th><th>Target</th><th>Status</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <div class="section">
+        <h2>Manual Intervention</h2>
+        <form class="manual-form" id="manual-form">
+            <label>Action Type
+                <input type="text" name="action_type" required placeholder="e.g., container_restart">
+            </label>
+            <label>Target ID
+                <input type="text" name="target_id" required placeholder="e.g., service_a">
+            </label>
+            <label>Params (JSON)
+                <input type="text" name="params" placeholder='{"timeout": 10}'>
+            </label>
+            <button type="submit">Execute</button>
+            <div id="manual-result"></div>
+        </form>
+    </div>
+    <div class="section">
+        <h2>Fault Injection (Live)</h2>
+        <form class="manual-form" id="fault-form">
+            <label>Fault Type
+                <select name="fault_type" required>
+                    <option value="latency">latency</option>
+                    <option value="crash">crash</option>
+                    <option value="cpu_stress">cpu_stress</option>
+                    <option value="memory_leak">memory_leak</option>
+                </select>
+            </label>
+            <label>Target Service
+                <select name="target" required>
+                    <option value="service_a">service_a</option>
+                    <option value="service_b">service_b</option>
+                    <option value="service_c">service_c</option>
+                    <option value="service_d">service_d</option>
+                </select>
+            </label>
+            <label>Params (JSON)
+                <input type="text" name="params" placeholder='{"duration": 30}'>
+            </label>
+            <button type="submit">Inject Fault</button>
+            <div id="fault-result"></div>
+        </form>
+        <h3>Active Faults</h3>
+        <table id="active-faults-table">
+            <thead><tr><th>ID</th><th>Type</th><th>Target</th><th>Status</th><th>Action</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<script>
+const statusBar = document.getElementById('status-bar');
+const faultsTable = document.getElementById('faults-table').querySelector('tbody');
+const recoveryTable = document.getElementById('recovery-table').querySelector('tbody');
+const manualForm = document.getElementById('manual-form');
+const manualResult = document.getElementById('manual-result');
+const faultForm = document.getElementById('fault-form');
+const faultResult = document.getElementById('fault-result');
+const activeFaultsTable = document.getElementById('active-faults-table').querySelector('tbody');
+let cy;
+
+function updateStatusBar(status) {
+    statusBar.innerHTML = '';
+    const s = status.services;
+    const boxes = [
+        {label: 'Overall Status', value: status.status},
+        {label: 'Total Services', value: s.total},
+        {label: 'Healthy', value: s.healthy},
+        {label: 'Unhealthy', value: s.unhealthy},
+        {label: 'Unknown', value: s.unknown},
+        {label: 'Active Faults', value: status.faults.active},
+        {label: 'Active Recovery Tasks', value: status.recovery.active_tasks}
+    ];
+    boxes.forEach(b => {
+        const div = document.createElement('div');
+        div.className = 'status-box';
+        div.innerHTML = `<div class="status-label">${b.label}</div><div class="status-value">${b.value}</div>`;
+        statusBar.appendChild(div);
+    });
+}
+
+function updateFaultsTable(faults) {
+    faultsTable.innerHTML = '';
+    faults.forEach(f => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${f.id || ''}</td><td>${f.type || ''}</td><td>${f.service_id || ''}</td><td>${f.severity || ''}</td>`;
+        faultsTable.appendChild(tr);
+    });
+}
+
+function updateRecoveryTable(tasks) {
+    recoveryTable.innerHTML = '';
+    Object.values(tasks).forEach(t => {
+        tr = document.createElement('tr');
+        tr.innerHTML = `<td>${t.id || ''}</td><td>${t.action?.type || ''}</td><td>${t.action?.target_id || ''}</td><td>${t.status || ''}</td>`;
+        recoveryTable.appendChild(tr);
+    });
+}
+
+function updateGraph(elements) {
+    if (!cy) {
+        cy = cytoscape({
+            container: document.getElementById('cy'),
+            elements: elements,
+            style: [
+                { selector: 'node', style: {
+                    'background-color': ele => ele.data('health') === 'healthy' ? '#2ecc71' : (ele.data('health') === 'unhealthy' ? '#e74c3c' : '#bdc3c7'),
+                    'label': 'data(id)',
+                    'color': '#222',
+                    'text-valign': 'center',
+                    'text-halign': 'center',
+                    'font-size': 14
+                }},
+                { selector: 'edge', style: {
+                    'width': 2,
+                    'line-color': '#95a5a6',
+                    'target-arrow-color': '#95a5a6',
+                    'target-arrow-shape': 'triangle',
+                    'curve-style': 'bezier'
+                }}
+            ],
+            layout: { name: 'cose', animate: true }
+        });
+    } else {
+        cy.json({ elements });
+        cy.layout({ name: 'cose', animate: true }).run();
+    }
+}
+
+function updateActiveFaultsTable(faults) {
+    activeFaultsTable.innerHTML = '';
+    faults.forEach(f => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${f.id || ''}</td><td>${f.type || ''}</td><td>${f.target || ''}</td><td>${f.status || ''}</td><td><button onclick="stopFault('${f.id}')">Stop</button></td>`;
+        activeFaultsTable.appendChild(tr);
+    });
+}
+
+async function refresh() {
+    try {
+        const [statusRes, graphRes] = await Promise.all([
+            fetch('/status'),
+            fetch('/graph')
+        ]);
+        const status = await statusRes.json();
+        const graph = await graphRes.json();
+        updateStatusBar(status);
+        updateFaultsTable(status.faults.details || []);
+        updateRecoveryTable(status.recovery.details || {});
+        updateGraph(graph.elements || []);
+    } catch (e) {
+        statusBar.innerHTML = '<div class="status-box">Error loading data</div>';
+    }
+}
+
+async function refreshActiveFaults() {
+    try {
+        const res = await fetch('/active_faults');
+        const data = await res.json();
+        updateActiveFaultsTable(data.active_faults || []);
+    } catch (e) {
+        activeFaultsTable.innerHTML = '<tr><td colspan="5">Error loading faults</td></tr>';
+    }
+}
+
+manualForm.onsubmit = async e => {
+    e.preventDefault();
+    const form = new FormData(manualForm);
+    const action_type = form.get('action_type');
+    const target_id = form.get('target_id');
+    let params = {};
+    try { params = JSON.parse(form.get('params') || '{}'); } catch {}
+    const res = await fetch('/manual_intervention', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ action_type, target_id, params })
+    });
+    const result = await res.json();
+    manualResult.innerText = result.message || (result.success ? 'Success' : 'Failed');
+    refresh();
+};
+
+faultForm.onsubmit = async e => {
+    e.preventDefault();
+    const form = new FormData(faultForm);
+    const fault_type = form.get('fault_type');
+    const target = form.get('target');
+    let params = {};
+    try { params = JSON.parse(form.get('params') || '{}'); } catch {}
+    const res = await fetch('/inject_fault', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fault_type, target, params })
+    });
+    const result = await res.json();
+    faultResult.innerText = result.success ? `Injected fault: ${result.fault_id}` : (result.message || 'Failed');
+    refreshActiveFaults();
+};
+
+async function stopFault(fault_id) {
+    await fetch('/stop_fault', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ fault_id })
+    });
+    refreshActiveFaults();
+}
+
+setInterval(refresh, 5000);
+setInterval(refreshActiveFaults, 5000);
+refresh();
+refreshActiveFaults();
+</script>
+</body>
+</html> 

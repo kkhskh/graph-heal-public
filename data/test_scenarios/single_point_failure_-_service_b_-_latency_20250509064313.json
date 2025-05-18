@@ -1,0 +1,453 @@
+{
+  "name": "Single Point Failure - service_b - latency",
+  "description": "Test scenario with a latency fault injected into service_b for 40s",
+  "started": "2025-05-09T06:42:03.487417",
+  "setup": {
+    "duration": 5.005072832107544,
+    "result": {
+      "status": "monitoring_started"
+    }
+  },
+  "execution": {
+    "duration": 60.04949402809143,
+    "result": {
+      "snapshots": [
+        {
+          "timestamp": 1746787334.4986129,
+          "relative_time": 6.005003929138184,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:13.658922",
+              "availability": 80.76923076923077
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:13.664759",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:13.670258",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:13.675261",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "latency",
+            "service_url": "http://localhost:5002",
+            "duration": 40,
+            "latency_ms": 500,
+            "start_time": 1746787328.4932458,
+            "end_time": 1746787388.5425699,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787340.503825,
+          "relative_time": 12.01021695137024,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:19.745713",
+              "availability": 81.48148148148148
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:19.752215",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:19.757785",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:19.763274",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "latency",
+            "service_url": "http://localhost:5002",
+            "duration": 40,
+            "latency_ms": 500,
+            "start_time": 1746787328.4932458,
+            "end_time": 1746787388.5425699,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787346.509129,
+          "relative_time": 18.01552104949951,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:25.832986",
+              "availability": 82.14285714285714
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:25.841089",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:25.847615",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:25.854072",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "latency",
+            "service_url": "http://localhost:5002",
+            "duration": 40,
+            "latency_ms": 500,
+            "start_time": 1746787328.4932458,
+            "end_time": 1746787388.5425699,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787352.51457,
+          "relative_time": 24.020961046218872,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:31.929265",
+              "availability": 82.75862068965517
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:31.936370",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:31.942093",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:31.947864",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "latency",
+            "service_url": "http://localhost:5002",
+            "duration": 40,
+            "latency_ms": 500,
+            "start_time": 1746787328.4932458,
+            "end_time": 1746787388.5425699,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787358.519781,
+          "relative_time": 30.026172876358032,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:38.027800",
+              "availability": 83.33333333333334
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:38.034321",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:38.040515",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:38.046245",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "latency",
+            "service_url": "http://localhost:5002",
+            "duration": 40,
+            "latency_ms": 500,
+            "start_time": 1746787328.4932458,
+            "end_time": 1746787388.5425699,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787364.525057,
+          "relative_time": 36.03144907951355,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:44.123317",
+              "availability": 83.87096774193549
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:44.129650",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:44.135934",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:44.141377",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "latency",
+            "service_url": "http://localhost:5002",
+            "duration": 40,
+            "latency_ms": 500,
+            "start_time": 1746787328.4932458,
+            "end_time": 1746787388.5425699,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787370.526263,
+          "relative_time": 42.032655000686646,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:50.215123",
+              "availability": 84.375
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:50.219463",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:50.222658",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:50.226181",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "latency",
+            "service_url": "http://localhost:5002",
+            "duration": 40,
+            "latency_ms": 500,
+            "start_time": 1746787328.4932458,
+            "end_time": 1746787388.5425699,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787376.531738,
+          "relative_time": 48.03812909126282,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:56.299865",
+              "availability": 84.84848484848484
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:56.306693",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:56.312667",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:42:56.319351",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "latency",
+            "service_url": "http://localhost:5002",
+            "duration": 40,
+            "latency_ms": 500,
+            "start_time": 1746787328.4932458,
+            "end_time": 1746787388.5425699,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787382.536942,
+          "relative_time": 54.04333424568176,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:43:02.397311",
+              "availability": 85.29411764705883
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:43:02.403949",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:43:02.409436",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:43:02.415308",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "latency",
+            "service_url": "http://localhost:5002",
+            "duration": 40,
+            "latency_ms": 500,
+            "start_time": 1746787328.4932458,
+            "end_time": 1746787388.5425699,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787388.5422359,
+          "relative_time": 60.048628091812134,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:43:08.493999",
+              "availability": 85.71428571428571
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:43:08.501049",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:43:08.507053",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:43:08.512911",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "latency",
+            "service_url": "http://localhost:5002",
+            "duration": 40,
+            "latency_ms": 500,
+            "start_time": 1746787328.4932458,
+            "end_time": 1746787388.5425699,
+            "status": "stopped"
+          }
+        }
+      ],
+      "final_status": {
+        "service_a": {
+          "name": "User Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:43:08.493999",
+          "availability": 85.71428571428571
+        },
+        "service_b": {
+          "name": "Order Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:43:08.501049",
+          "availability": 100.0
+        },
+        "service_c": {
+          "name": "Inventory Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:43:08.507053",
+          "availability": 100.0
+        },
+        "service_d": {
+          "name": "Notification Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:43:08.512911",
+          "availability": 100.0
+        }
+      },
+      "fault_id": "latency_http://localhost:5002_1746787328",
+      "fault_info": {
+        "type": "latency",
+        "service_url": "http://localhost:5002",
+        "duration": 40,
+        "latency_ms": 500,
+        "start_time": 1746787328.4932458,
+        "end_time": 1746787388.5425699,
+        "status": "stopped"
+      }
+    }
+  },
+  "cleanup": {
+    "duration": 5.169741153717041,
+    "result": {
+      "status": "monitoring_stopped",
+      "final_graph": "data/test_scenarios/single_point_failure_final_graph.png"
+    }
+  },
+  "finished": "2025-05-09T06:43:13.712268",
+  "success": true
+}

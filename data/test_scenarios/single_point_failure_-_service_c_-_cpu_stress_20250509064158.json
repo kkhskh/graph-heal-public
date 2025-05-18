@@ -1,0 +1,453 @@
+{
+  "name": "Single Point Failure - service_c - cpu_stress",
+  "description": "Test scenario with a cpu_stress fault injected into service_c for 40s",
+  "started": "2025-05-09T06:40:48.249735",
+  "setup": {
+    "duration": 5.005672931671143,
+    "result": {
+      "status": "monitoring_started"
+    }
+  },
+  "execution": {
+    "duration": 63.47731399536133,
+    "result": {
+      "snapshots": [
+        {
+          "timestamp": 1746787262.685409,
+          "relative_time": 6.004997253417969,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:02.419469",
+              "availability": 67.3913043478261
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:02.423421",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:02.427324",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:02.431043",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "cpu_stress",
+            "container": "service_c",
+            "duration": 40,
+            "load": 80,
+            "start_time": 1746787256.680116,
+            "end_time": 1746787316.732927,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787268.6905851,
+          "relative_time": 12.01017427444458,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:08.478600",
+              "availability": 69.38775510204081
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:08.482993",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:08.486320",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:08.489569",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "cpu_stress",
+            "container": "service_c",
+            "duration": 40,
+            "load": 80,
+            "start_time": 1746787256.680116,
+            "end_time": 1746787316.732927,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787274.695848,
+          "relative_time": 18.01543617248535,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:14.537702",
+              "availability": 71.15384615384616
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:14.541747",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:14.545839",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:14.549978",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "cpu_stress",
+            "container": "service_c",
+            "duration": 40,
+            "load": 80,
+            "start_time": 1746787256.680116,
+            "end_time": 1746787316.732927,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787280.701343,
+          "relative_time": 24.0209321975708,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:20.607195",
+              "availability": 72.72727272727273
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:20.611603",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:20.615418",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:20.619094",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "cpu_stress",
+            "container": "service_c",
+            "duration": 40,
+            "load": 80,
+            "start_time": 1746787256.680116,
+            "end_time": 1746787316.732927,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787286.706482,
+          "relative_time": 30.02607011795044,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:26.672114",
+              "availability": 74.13793103448276
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:26.676554",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:26.680489",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:26.684380",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "cpu_stress",
+            "container": "service_c",
+            "duration": 40,
+            "load": 80,
+            "start_time": 1746787256.680116,
+            "end_time": 1746787316.732927,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787292.711621,
+          "relative_time": 36.031209230422974,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:30.716547",
+              "availability": 75.0
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:30.721699",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:30.725894",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:30.729578",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "cpu_stress",
+            "container": "service_c",
+            "duration": 40,
+            "load": 80,
+            "start_time": 1746787256.680116,
+            "end_time": 1746787316.732927,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787298.716834,
+          "relative_time": 42.036423206329346,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:36.784369",
+              "availability": 76.19047619047619
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:36.789252",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:36.793428",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:36.798046",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "cpu_stress",
+            "container": "service_c",
+            "duration": 40,
+            "load": 80,
+            "start_time": 1746787256.680116,
+            "end_time": 1746787316.732927,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787304.722038,
+          "relative_time": 48.04162621498108,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:43.009975",
+              "availability": 77.27272727272727
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:43.017136",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:43.023350",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:43.029222",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "cpu_stress",
+            "container": "service_c",
+            "duration": 40,
+            "load": 80,
+            "start_time": 1746787256.680116,
+            "end_time": 1746787316.732927,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787310.727336,
+          "relative_time": 54.04692506790161,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:49.106826",
+              "availability": 78.26086956521739
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:49.113527",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:49.119923",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:49.125499",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "cpu_stress",
+            "container": "service_c",
+            "duration": 40,
+            "load": 80,
+            "start_time": 1746787256.680116,
+            "end_time": 1746787316.732927,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787316.732668,
+          "relative_time": 60.05225610733032,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:55.203558",
+              "availability": 79.16666666666666
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:55.209699",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:55.215880",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:41:55.222313",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "cpu_stress",
+            "container": "service_c",
+            "duration": 40,
+            "load": 80,
+            "start_time": 1746787256.680116,
+            "end_time": 1746787316.732927,
+            "status": "stopped"
+          }
+        }
+      ],
+      "final_status": {
+        "service_a": {
+          "name": "User Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:41:55.203558",
+          "availability": 79.16666666666666
+        },
+        "service_b": {
+          "name": "Order Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:41:55.209699",
+          "availability": 100.0
+        },
+        "service_c": {
+          "name": "Inventory Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:41:55.215880",
+          "availability": 100.0
+        },
+        "service_d": {
+          "name": "Notification Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:41:55.222313",
+          "availability": 100.0
+        }
+      },
+      "fault_id": "cpu_stress_service_c_1746787253",
+      "fault_info": {
+        "type": "cpu_stress",
+        "container": "service_c",
+        "duration": 40,
+        "load": 80,
+        "start_time": 1746787256.680116,
+        "end_time": 1746787316.732927,
+        "status": "stopped"
+      }
+    }
+  },
+  "cleanup": {
+    "duration": 1.748230218887329,
+    "result": {
+      "status": "monitoring_stopped",
+      "final_graph": "data/test_scenarios/single_point_failure_final_graph.png"
+    }
+  },
+  "finished": "2025-05-09T06:41:58.481116",
+  "success": true
+}

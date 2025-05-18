@@ -1,0 +1,58 @@
+{
+  "name": "Normal Operation",
+  "description": "Test scenario with no faults to establish baseline",
+  "started": "2025-05-09T06:34:59.210387",
+  "setup": {
+    "duration": 0.000881195068359375,
+    "result": {
+      "status": "monitoring_started"
+    }
+  },
+  "execution": {
+    "duration": 30.027793884277344,
+    "result": {
+      "snapshots": [
+        {
+          "timestamp": 1746786904.216635,
+          "relative_time": 5.005040884017944,
+          "services_status": {}
+        },
+        {
+          "timestamp": 1746786909.2218308,
+          "relative_time": 10.010236978530884,
+          "services_status": {}
+        },
+        {
+          "timestamp": 1746786914.227078,
+          "relative_time": 15.015483856201172,
+          "services_status": {}
+        },
+        {
+          "timestamp": 1746786919.2323542,
+          "relative_time": 20.020759105682373,
+          "services_status": {}
+        },
+        {
+          "timestamp": 1746786924.2375271,
+          "relative_time": 25.025933027267456,
+          "services_status": {}
+        },
+        {
+          "timestamp": 1746786929.239243,
+          "relative_time": 30.027647972106934,
+          "services_status": {}
+        }
+      ],
+      "final_status": {}
+    }
+  },
+  "cleanup": {
+    "duration": 5.19479513168335,
+    "result": {
+      "status": "monitoring_stopped",
+      "final_graph": "data/test_scenarios/normal_operation_final_graph.png"
+    }
+  },
+  "finished": "2025-05-09T06:35:34.434209",
+  "success": true
+}

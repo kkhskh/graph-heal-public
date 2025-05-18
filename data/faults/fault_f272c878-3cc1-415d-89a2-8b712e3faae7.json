@@ -1,0 +1,10 @@
+{
+  "id": "f272c878-3cc1-415d-89a2-8b712e3faae7",
+  "type": "latency",
+  "target": "service_b",
+  "params": {
+    "latency_ms": 500,
+    "duration": 30
+  },
+  "timestamp": 1747291580.19595
+}

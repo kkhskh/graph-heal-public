@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": "service_a",
+      "name": "User Service",
+      "service_type": "user_management",
+      "url": "http://localhost:5001",
+      "status": "healthy",
+      "metrics": {
+        "average_response_time": 0.2648934456777625,
+        "requests_served": 14,
+        "total_users": 3,
+        "timestamp": "2025-05-09T06:20:24.621143"
+      },
+      "last_updated": "2025-05-09T06:20:18.782644"
+    },
+    {
+      "id": "service_b",
+      "name": "Order Service",
+      "service_type": "order_management",
+      "url": "http://localhost:5002",
+      "status": "healthy",
+      "metrics": {
+        "average_response_time": 0.3631385464581067,
+        "requests_served": 10,
+        "total_orders": 2,
+        "timestamp": "2025-05-09T06:20:24.621143"
+      },
+      "last_updated": "2025-05-09T06:20:18.782651"
+    },
+    {
+      "id": "service_c",
+      "name": "Inventory Service",
+      "service_type": "inventory_management",
+      "url": "http://localhost:5003",
+      "status": "healthy",
+      "metrics": {
+        "average_response_time": 0.2758935134391822,
+        "requests_served": 78,
+        "total_items": 60,
+        "unique_items": 3,
+        "timestamp": "2025-05-09T06:20:24.621143"
+      },
+      "last_updated": "2025-05-09T06:20:18.782652"
+    },
+    {
+      "id": "service_d",
+      "name": "Notification Service",
+      "service_type": "notification",
+      "url": "http://localhost:5004",
+      "status": "healthy",
+      "metrics": {
+        "average_response_time": 0.08397520839275158,
+        "requests_served": 6,
+        "total_notifications": 0,
+        "timestamp": "2025-05-09T06:20:24.621143"
+      },
+      "last_updated": "2025-05-09T06:20:18.782653"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "service_b",
+      "target_id": "service_a",
+      "edge_type": "api_call",
+      "weight": 4.631385464581067,
+      "metrics": {
+        "call_count": 5,
+        "error_count": 0,
+        "avg_latency": 0.3631385464581067
+      },
+      "last_updated": "2025-05-09T06:20:25.693148"
+    },
+    {
+      "source_id": "service_b",
+      "target_id": "service_c",
+      "edge_type": "api_call",
+      "weight": 4.631385464581067,
+      "metrics": {
+        "call_count": 5,
+        "error_count": 0,
+        "avg_latency": 0.3631385464581067
+      },
+      "last_updated": "2025-05-09T06:20:25.693157"
+    },
+    {
+      "source_id": "service_a",
+      "target_id": "service_d",
+      "edge_type": "api_call",
+      "weight": 3.648934456777625,
+      "metrics": {
+        "call_count": 7,
+        "error_count": 0,
+        "avg_latency": 0.2648934456777625
+      },
+      "last_updated": "2025-05-09T06:20:25.693159"
+    },
+    {
+      "source_id": "service_b",
+      "target_id": "service_d",
+      "edge_type": "api_call",
+      "weight": 4.631385464581067,
+      "metrics": {
+        "call_count": 5,
+        "error_count": 0,
+        "avg_latency": 0.3631385464581067
+      },
+      "last_updated": "2025-05-09T06:20:25.693160"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "nodes": [
+    {
+      "id": "service_a",
+      "name": "User Service",
+      "service_type": "user_management",
+      "url": "http://localhost:5001",
+      "status": "unknown",
+      "metrics": {},
+      "last_updated": "2025-05-09T09:46:32.826021"
+    },
+    {
+      "id": "service_b",
+      "name": "Order Service",
+      "service_type": "order_management",
+      "url": "http://localhost:5002",
+      "status": "unknown",
+      "metrics": {},
+      "last_updated": "2025-05-09T09:46:32.826024"
+    },
+    {
+      "id": "service_c",
+      "name": "Inventory Service",
+      "service_type": "inventory_management",
+      "url": "http://localhost:5003",
+      "status": "unknown",
+      "metrics": {},
+      "last_updated": "2025-05-09T09:46:32.826025"
+    },
+    {
+      "id": "service_d",
+      "name": "Notification Service",
+      "service_type": "notification",
+      "url": "http://localhost:5004",
+      "status": "unknown",
+      "metrics": {},
+      "last_updated": "2025-05-09T09:46:32.826026"
+    }
+  ],
+  "edges": [
+    {
+      "source_id": "service_b",
+      "target_id": "service_a",
+      "edge_type": "api_call",
+      "weight": 1.0,
+      "metrics": {
+        "call_count": 0,
+        "error_count": 0,
+        "avg_latency": 0.1
+      },
+      "last_updated": "2025-05-11T06:33:32.043396"
+    },
+    {
+      "source_id": "service_b",
+      "target_id": "service_c",
+      "edge_type": "api_call",
+      "weight": 1.0,
+      "metrics": {
+        "call_count": 0,
+        "error_count": 0,
+        "avg_latency": 0.1
+      },
+      "last_updated": "2025-05-11T06:33:32.043423"
+    },
+    {
+      "source_id": "service_a",
+      "target_id": "service_d",
+      "edge_type": "api_call",
+      "weight": 1.0,
+      "metrics": {
+        "call_count": 0,
+        "error_count": 0,
+        "avg_latency": 0.1
+      },
+      "last_updated": "2025-05-11T06:33:32.043436"
+    },
+    {
+      "source_id": "service_b",
+      "target_id": "service_d",
+      "edge_type": "api_call",
+      "weight": 1.0,
+      "metrics": {
+        "call_count": 0,
+        "error_count": 0,
+        "avg_latency": 0.1
+      },
+      "last_updated": "2025-05-11T06:33:32.043445"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "user_service": {
+    "timestamp": "2025-05-15T09:31:59.536225",
+    "status": "healthy",
+    "response_time": 0.001712
+  },
+  "order_service": {
+    "timestamp": "2025-05-15T09:31:59.536225",
+    "status": "unhealthy",
+    "error": "HTTPConnectionPool(host='service_b', port=5000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0xffffaa1d0f10>: Failed to establish a new connection: [Errno -2] Name or service not known'))"
+  },
+  "inventory_service": {
+    "timestamp": "2025-05-15T09:31:59.536225",
+    "status": "healthy",
+    "response_time": 0.001492
+  },
+  "notification_service": {
+    "timestamp": "2025-05-15T09:31:59.536225",
+    "status": "healthy",
+    "response_time": 0.001507
+  }
+}

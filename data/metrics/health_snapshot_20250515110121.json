@@ -1,0 +1,22 @@
+{
+  "user_service": {
+    "timestamp": "2025-05-15T11:01:21.639076",
+    "status": "healthy",
+    "response_time": 0.002693
+  },
+  "order_service": {
+    "timestamp": "2025-05-15T11:01:21.639076",
+    "status": "healthy",
+    "response_time": 0.00223
+  },
+  "inventory_service": {
+    "timestamp": "2025-05-15T11:01:21.639076",
+    "status": "healthy",
+    "response_time": 0.002141
+  },
+  "notification_service": {
+    "timestamp": "2025-05-15T11:01:21.639076",
+    "status": "healthy",
+    "response_time": 0.001606
+  }
+}

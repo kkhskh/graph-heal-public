@@ -1,0 +1,85 @@
+{
+    "services": [
+        {
+            "id": "service_a",
+            "name": "User Service",
+            "url": "http://localhost:8001",
+            "health_endpoint": "/health",
+            "metrics_endpoint": "/metrics"
+        },
+        {
+            "id": "service_b",
+            "name": "Order Service",
+            "url": "http://localhost:8002",
+            "health_endpoint": "/health",
+            "metrics_endpoint": "/metrics"
+        },
+        {
+            "id": "service_c",
+            "name": "Inventory Service",
+            "url": "http://localhost:8003",
+            "health_endpoint": "/health",
+            "metrics_endpoint": "/metrics"
+        },
+        {
+            "id": "service_d",
+            "name": "Notification Service",
+            "url": "http://localhost:8004",
+            "health_endpoint": "/health",
+            "metrics_endpoint": "/metrics"
+        }
+    ],
+    "test_settings": {
+        "initialization_wait": 5,
+        "detection_wait": 10,
+        "localization_wait": 15,
+        "recovery_wait": 20,
+        "resilience_wait": 40
+    },
+    "fault_scenarios": {
+        "latency": {
+            "type": "latency",
+            "params": {
+                "latency_ms": 500,
+                "duration": 30
+            }
+        },
+        "cpu_stress": {
+            "type": "cpu_stress",
+            "params": {
+                "load": 80,
+                "duration": 30
+            }
+        },
+        "memory_leak": {
+            "type": "memory_leak",
+            "params": {
+                "memory_mb": 50,
+                "duration": 30
+            }
+        }
+    },
+    "monitoring": {
+        "poll_interval": 1,
+        "update_interval": 2,
+        "timeout": 3
+    },
+    "anomaly_detection": {
+        "statistical": {
+            "window_size": 5,
+            "z_score_threshold": 2.0
+        },
+        "graph": {
+            "correlation_threshold": 0.5
+        }
+    },
+    "fault_localization": {
+        "correlation_threshold": 0.5,
+        "max_depth": 2
+    },
+    "recovery": {
+        "max_retries": 2,
+        "retry_delay": 3,
+        "verification_timeout": 15
+    }
+} 

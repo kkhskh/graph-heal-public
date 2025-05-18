@@ -1,0 +1,79 @@
+version: '3'
+
+services:
+  service_a:
+    build: ./services/service_a
+    ports:
+      - "5001:5000"
+    environment:
+      - SERVICE_NAME=User Service
+      - SERVICE_ID=user_service
+    command: python app.py
+    networks:
+      - graph-heal-network
+    restart: always
+
+  service_b:
+    build: ./services/service_b
+    ports:
+      - "5002:5000"
+    environment:
+      - SERVICE_NAME=Order Service
+      - SERVICE_ID=order_service
+    command: python app.py
+    networks:
+      - graph-heal-network
+    restart: always
+
+  service_c:
+    build: ./services/service_c
+    ports:
+      - "5003:5000"
+    environment:
+      - SERVICE_NAME=Inventory Service
+      - SERVICE_ID=inventory_service
+    command: python app.py
+    networks:
+      - graph-heal-network
+    restart: always
+
+  service_d:
+    build: ./services/service_d
+    ports:
+      - "5004:5000"
+    environment:
+      - SERVICE_NAME=Notification Service
+      - SERVICE_ID=notification_service
+    command: python app.py
+    networks:
+      - graph-heal-network
+    restart: always
+
+  monitoring:
+    build: .
+    ports:
+      - "5005:5000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - SERVICE_NAME=Monitoring Service
+      - SERVICE_ID=monitoring_service
+      - FLASK_APP=scripts/run_monitoring.py
+    command: python scripts/run_monitoring.py
+    networks:
+      - graph-heal-network
+    restart: always
+
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - graph-heal-network
+    restart: always
+
+networks:
+  graph-heal-network:
+    driver: bridge

@@ -1,0 +1,447 @@
+{
+  "name": "Single Point Failure - service_a - crash",
+  "description": "Test scenario with a crash fault injected into service_a for 30s",
+  "started": "2025-05-09T06:39:22.963144",
+  "setup": {
+    "duration": 5.005494117736816,
+    "result": {
+      "status": "monitoring_started"
+    }
+  },
+  "execution": {
+    "duration": 70.26458716392517,
+    "result": {
+      "snapshots": [
+        {
+          "timestamp": 1746787184.185971,
+          "relative_time": 6.005032062530518,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "unhealthy",
+              "last_check": "2025-05-09T06:39:43.305418",
+              "error": "HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x116482f30>: Failed to establish a new connection: [Errno 61] Connection refused'))",
+              "availability": 72.72727272727273
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:39:43.309817",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:39:43.316608",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:39:43.322751",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "crash",
+            "container": "service_a",
+            "restart_after": 30,
+            "start_time": 1746787178.180403,
+            "end_time": 1746787238.233632,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787190.191251,
+          "relative_time": 12.0103120803833,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "unhealthy",
+              "last_check": "2025-05-09T06:39:49.384677",
+              "error": "HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1164e4320>: Failed to establish a new connection: [Errno 61] Connection refused'))",
+              "availability": 57.14285714285714
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:39:49.389644",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:39:49.395834",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:39:49.401807",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "crash",
+            "container": "service_a",
+            "restart_after": 30,
+            "start_time": 1746787178.180403,
+            "end_time": 1746787238.233632,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787196.19681,
+          "relative_time": 18.015870094299316,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "unhealthy",
+              "last_check": "2025-05-09T06:39:55.466876",
+              "error": "HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1164e56d0>: Failed to establish a new connection: [Errno 61] Connection refused'))",
+              "availability": 47.05882352941176
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:39:55.471708",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:39:55.477628",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:39:55.483409",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "crash",
+            "container": "service_a",
+            "restart_after": 30,
+            "start_time": 1746787178.180403,
+            "end_time": 1746787238.233632,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787202.202003,
+          "relative_time": 24.021063089370728,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "unhealthy",
+              "last_check": "2025-05-09T06:40:01.543247",
+              "error": "HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x116483b60>: Failed to establish a new connection: [Errno 61] Connection refused'))",
+              "availability": 40.0
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:01.548619",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:01.555001",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:01.560675",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "crash",
+            "container": "service_a",
+            "restart_after": 30,
+            "start_time": 1746787178.180403,
+            "end_time": 1746787238.233632,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787208.207202,
+          "relative_time": 30.02626323699951,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "unhealthy",
+              "last_check": "2025-05-09T06:40:07.619218",
+              "error": "HTTPConnectionPool(host='localhost', port=5001): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1164827b0>: Failed to establish a new connection: [Errno 61] Connection refused'))",
+              "availability": 34.78260869565217
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:07.624171",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:07.630855",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:07.636709",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "crash",
+            "container": "service_a",
+            "restart_after": 30,
+            "start_time": 1746787178.180403,
+            "end_time": 1746787238.233632,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787214.2124858,
+          "relative_time": 36.031545877456665,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:13.712825",
+              "availability": 42.30769230769231
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:13.717697",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:13.721573",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:13.725546",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "crash",
+            "container": "service_a",
+            "restart_after": 30,
+            "start_time": 1746787178.180403,
+            "end_time": 1746787238.233632,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787220.2177222,
+          "relative_time": 42.03678297996521,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:19.797403",
+              "availability": 48.275862068965516
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:19.804038",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:19.809417",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:19.815319",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "crash",
+            "container": "service_a",
+            "restart_after": 30,
+            "start_time": 1746787178.180403,
+            "end_time": 1746787238.233632,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787226.222943,
+          "relative_time": 48.042004108428955,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:25.888833",
+              "availability": 53.125
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:25.895291",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:25.901564",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:25.907325",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "crash",
+            "container": "service_a",
+            "restart_after": 30,
+            "start_time": 1746787178.180403,
+            "end_time": 1746787238.233632,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787232.22822,
+          "relative_time": 54.047280073165894,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:31.984207",
+              "availability": 57.14285714285714
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:31.990730",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:31.996463",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:32.003030",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "crash",
+            "container": "service_a",
+            "restart_after": 30,
+            "start_time": 1746787178.180403,
+            "end_time": 1746787238.233632,
+            "status": "stopped"
+          }
+        },
+        {
+          "timestamp": 1746787238.233406,
+          "relative_time": 60.05246710777283,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:38.080726",
+              "availability": 60.526315789473685
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:38.088410",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:38.094673",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:40:38.100702",
+              "availability": 100.0
+            }
+          },
+          "fault_info": {
+            "type": "crash",
+            "container": "service_a",
+            "restart_after": 30,
+            "start_time": 1746787178.180403,
+            "end_time": 1746787238.233632,
+            "status": "stopped"
+          }
+        }
+      ],
+      "final_status": {
+        "service_a": {
+          "name": "User Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:40:38.080726",
+          "availability": 60.526315789473685
+        },
+        "service_b": {
+          "name": "Order Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:40:38.088410",
+          "availability": 100.0
+        },
+        "service_c": {
+          "name": "Inventory Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:40:38.094673",
+          "availability": 100.0
+        },
+        "service_d": {
+          "name": "Notification Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:40:38.100702",
+          "availability": 100.0
+        }
+      },
+      "fault_id": "crash_service_a_1746787167",
+      "fault_info": {
+        "type": "crash",
+        "container": "service_a",
+        "restart_after": 30,
+        "start_time": 1746787178.180403,
+        "end_time": 1746787238.233632,
+        "status": "stopped"
+      }
+    }
+  },
+  "cleanup": {
+    "duration": 5.009871959686279,
+    "result": {
+      "status": "monitoring_stopped",
+      "final_graph": "data/test_scenarios/single_point_failure_final_graph.png"
+    }
+  },
+  "finished": "2025-05-09T06:40:43.243482",
+  "success": true
+}

@@ -1,0 +1,23 @@
+{
+  "total_scenarios": 3,
+  "successful_scenarios": 3,
+  "failed_scenarios": 0,
+  "total_duration": 235.75511121749878,
+  "scenarios": [
+    {
+      "name": "Single Point Failure - service_a - crash",
+      "success": true,
+      "duration": 80.27995324134827
+    },
+    {
+      "name": "Single Point Failure - service_c - cpu_stress",
+      "success": true,
+      "duration": 70.2312171459198
+    },
+    {
+      "name": "Single Point Failure - service_b - latency",
+      "success": true,
+      "duration": 70.22430801391602
+    }
+  ]
+}

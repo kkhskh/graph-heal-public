@@ -1,0 +1,55 @@
+{
+    "services": [
+        {
+            "id": "service_a",
+            "name": "User Service",
+            "url": "http://localhost:5001",
+            "health_endpoint": "/health",
+            "metrics_endpoint": "/metrics"
+        },
+        {
+            "id": "service_b",
+            "name": "Order Service",
+            "url": "http://localhost:5002",
+            "health_endpoint": "/health",
+            "metrics_endpoint": "/metrics"
+        },
+        {
+            "id": "service_c",
+            "name": "Inventory Service",
+            "url": "http://localhost:5003",
+            "health_endpoint": "/health",
+            "metrics_endpoint": "/metrics"
+        },
+        {
+            "id": "service_d",
+            "name": "Notification Service",
+            "url": "http://localhost:5004",
+            "health_endpoint": "/health",
+            "metrics_endpoint": "/metrics"
+        }
+    ],
+    "monitoring": {
+        "poll_interval": 2,
+        "update_interval": 5,
+        "timeout": 5
+    },
+    "anomaly_detection": {
+        "statistical": {
+            "window_size": 10,
+            "z_score_threshold": 0.1
+        },
+        "graph": {
+            "correlation_threshold": 0.6
+        }
+    },
+    "fault_localization": {
+        "correlation_threshold": 0.6,
+        "max_depth": 3
+    },
+    "recovery": {
+        "max_retries": 3,
+        "retry_delay": 5,
+        "verification_timeout": 30
+    }
+} 

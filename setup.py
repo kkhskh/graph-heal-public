@@ -1,0 +1,23 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="graph_heal",
+    version="0.1.0",
+    packages=find_packages(),
+    install_requires=[
+        "flask==2.0.1",
+        "werkzeug==2.0.1",
+        "requests==2.31.0",
+        "prometheus-client==0.11.0",
+        "networkx==3.2.1",
+        "numpy==1.26.4",
+        "matplotlib==3.8.3",
+        "python-dateutil==2.8.2",
+        "pandas>=2.0.0",
+        "seaborn>=0.12.0",
+        "scikit-learn>=1.2.0",
+        "docker>=6.0.0",
+        "PyYAML>=6.0"
+    ],
+    python_requires=">=3.9",
+) 

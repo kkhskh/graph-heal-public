@@ -1,0 +1,11 @@
+{
+  "id": "c0321cae-44da-4efa-85ae-febb93f7c760",
+  "type": "cpu_stress",
+  "target": "service_b",
+  "params": {
+    "duration": 30,
+    "load": 80
+  },
+  "timestamp": 1747302078.202348,
+  "status": "active"
+}

@@ -1,0 +1,233 @@
+{
+  "name": "Normal Operation",
+  "description": "Test scenario with no faults to establish baseline",
+  "started": "2025-05-09T06:37:48.155365",
+  "setup": {
+    "duration": 0.0006010532379150391,
+    "result": {
+      "status": "monitoring_started"
+    }
+  },
+  "execution": {
+    "duration": 30.02547788619995,
+    "result": {
+      "snapshots": [
+        {
+          "timestamp": 1746787073.1610692,
+          "relative_time": 5.005022048950195,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:37:52.213717",
+              "availability": 100.0
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:37:52.220549",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:37:52.226230",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:37:52.232411",
+              "availability": 100.0
+            }
+          }
+        },
+        {
+          "timestamp": 1746787078.1664152,
+          "relative_time": 10.010368824005127,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:37:56.277366",
+              "availability": 100.0
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:37:56.284000",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:37:56.289561",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:37:56.295259",
+              "availability": 100.0
+            }
+          }
+        },
+        {
+          "timestamp": 1746787083.171668,
+          "relative_time": 15.015621900558472,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:02.372235",
+              "availability": 100.0
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:02.378363",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:02.384617",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:02.390121",
+              "availability": 100.0
+            }
+          }
+        },
+        {
+          "timestamp": 1746787088.175528,
+          "relative_time": 20.01948094367981,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:06.435409",
+              "availability": 100.0
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:06.441382",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:06.447637",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:06.453517",
+              "availability": 100.0
+            }
+          }
+        },
+        {
+          "timestamp": 1746787093.1807182,
+          "relative_time": 25.024672031402588,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:12.528539",
+              "availability": 100.0
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:12.535236",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:12.540999",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:12.547272",
+              "availability": 100.0
+            }
+          }
+        },
+        {
+          "timestamp": 1746787098.181319,
+          "relative_time": 30.025271892547607,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:16.591979",
+              "availability": 100.0
+            },
+            "service_b": {
+              "name": "Order Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:16.599857",
+              "availability": 100.0
+            },
+            "service_c": {
+              "name": "Inventory Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:16.606090",
+              "availability": 100.0
+            },
+            "service_d": {
+              "name": "Notification Service",
+              "health": "healthy",
+              "last_check": "2025-05-09T06:38:16.612431",
+              "availability": 100.0
+            }
+          }
+        }
+      ],
+      "final_status": {
+        "service_a": {
+          "name": "User Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:38:16.591979",
+          "availability": 100.0
+        },
+        "service_b": {
+          "name": "Order Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:38:16.599857",
+          "availability": 100.0
+        },
+        "service_c": {
+          "name": "Inventory Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:38:16.606090",
+          "availability": 100.0
+        },
+        "service_d": {
+          "name": "Notification Service",
+          "health": "healthy",
+          "last_check": "2025-05-09T06:38:16.612431",
+          "availability": 100.0
+        }
+      }
+    }
+  },
+  "cleanup": {
+    "duration": 5.187952995300293,
+    "result": {
+      "status": "monitoring_stopped",
+      "final_graph": "data/test_scenarios/normal_operation_final_graph.png"
+    }
+  },
+  "finished": "2025-05-09T06:38:23.369487",
+  "success": true
+}

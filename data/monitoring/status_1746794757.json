@@ -1,0 +1,41 @@
+{
+  "timestamp": 1746794757.390145,
+  "services": {
+    "service_a": {
+      "status": "healthy",
+      "metrics": {
+        "service": "user-service",
+        "status": "healthy",
+        "response_time": 0.0031747817993164062
+      },
+      "timestamp": 1746794757.390145
+    },
+    "service_b": {
+      "status": "healthy",
+      "metrics": {
+        "service": "order-service",
+        "status": "healthy",
+        "response_time": 0.00273895263671875
+      },
+      "timestamp": 1746794757.390145
+    },
+    "service_c": {
+      "status": "healthy",
+      "metrics": {
+        "service": "inventory-service",
+        "status": "healthy",
+        "response_time": 0.0019838809967041016
+      },
+      "timestamp": 1746794757.390145
+    },
+    "service_d": {
+      "status": "healthy",
+      "metrics": {
+        "service": "notification-service",
+        "status": "healthy",
+        "response_time": 0.002218961715698242
+      },
+      "timestamp": 1746794757.390145
+    }
+  }
+}

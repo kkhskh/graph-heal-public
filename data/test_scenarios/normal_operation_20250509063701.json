@@ -1,0 +1,22 @@
+{
+  "name": "Normal Operation",
+  "description": "Test scenario with no faults to establish baseline",
+  "started": "2025-05-09T06:36:26.550330",
+  "setup": {
+    "duration": 0.0005071163177490234,
+    "result": {
+      "status": "monitoring_started"
+    }
+  },
+  "execution": {
+    "duration": 30.0289249420166,
+    "result": {
+      "snapshots": [
+        {
+          "timestamp": 1746786991.555941,
+          "relative_time": 5.0050270557403564,
+          "services_status": {
+            "service_a": {
+              "name": "User Service",
+              "health": "healthy",
+              "last_check": 

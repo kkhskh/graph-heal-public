@@ -1,0 +1,27 @@
+{
+  "user_service": {
+    "average_response_time": 0.41667155254702515,
+    "requests_served": 86,
+    "total_users": 3,
+    "timestamp": "2025-05-11T04:41:02.380273"
+  },
+  "order_service": {
+    "average_response_time": 0.6624280892539781,
+    "requests_served": 26,
+    "total_orders": 2,
+    "timestamp": "2025-05-11T04:41:02.380273"
+  },
+  "inventory_service": {
+    "average_response_time": 0.08223537833086135,
+    "requests_served": 28,
+    "total_items": 60,
+    "unique_items": 3,
+    "timestamp": "2025-05-11T04:41:02.380273"
+  },
+  "notification_service": {
+    "average_response_time": 0.0859133475735478,
+    "requests_served": 27,
+    "total_notifications": 0,
+    "timestamp": "2025-05-11T04:41:02.380273"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "single_test_service_b",
+  "params": {
+    "mode": "single",
+    "duration": 120,
+    "fault_duration": 30,
+    "target": "service_b"
+  },
+  "start_time": 1746790057.963001,
+  "events": [],
+  "metrics": {},
+  "end_time": 1746790183.099583,
+  "duration": 125.1365818977356,
+  "metric_summaries": {}
+}

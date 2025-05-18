@@ -1,0 +1,40 @@
+{
+  "name": "single_test_service_b",
+  "params": {
+    "mode": "single",
+    "duration": 120,
+    "fault_duration": 30,
+    "target": "service_b"
+  },
+  "start_time": 1746790213.143436,
+  "events": [
+    {
+      "type": "fault_injection",
+      "timestamp": 1746790213.149001,
+      "data": {
+        "id": "bf041dca-f473-4688-9ee0-944fdab37389",
+        "type": "latency",
+        "target": "service_b",
+        "params": {
+          "duration": 30
+        },
+        "timestamp": 1746790213.1489751
+      }
+    }
+  ],
+  "metrics": {
+    "localization_accuracy": [
+      0.0
+    ]
+  },
+  "end_time": 1746790338.279256,
+  "duration": 125.13582015037537,
+  "metric_summaries": {
+    "localization_accuracy": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    }
+  }
+}
